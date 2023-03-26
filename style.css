@@ -1,0 +1,74 @@
+.List {
+  display: flex;
+  margin: 150px;
+  background: hsl(0, 71%, 70%);
+  padding: 30px;
+  border-radius: 5px;
+  flex-direction: row;
+}
+
+.List * {
+  font-family: sans-serif;
+}
+
+.listColumn {
+  flex: 1;
+}
+
+.listColumn:not(:last-child) {
+  margin-right: 30px;
+}
+
+.listColumnTitle {
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: white;
+  user-select: none;
+}
+.listItem {
+  display: block;
+}
+.listItemInput {
+  padding: 10px 15px;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.listDropzone {
+  height: 10px;
+  transition: background 0.15s, height 0.15s;
+}
+
+.listDropzone--active {
+  height: 20px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.listAdd-item {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: white;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 70em) {
+  .List {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0.8em;
+    margin: 0;
+  }
+  .listColumnTitle {
+    margin-top: 1.6em;
+  }
+  .listColumn:not(:last-child) {
+    margin-right: 0;
+  }
+}
